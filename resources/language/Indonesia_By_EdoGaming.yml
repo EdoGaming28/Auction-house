@@ -1,0 +1,176 @@
+---
+# JANGAN DI EDIT INI BAKAL ERROR NANTI. #
+lang-version: 1
+
+# Refer to https://minecraft.gamepedia.com/Formatting_codes for formatting codes, you can replace the '§' symbol with a '&'
+
+#Jangan Diubah!
+# Title
+menu-name: "§cAuction House"
+listings-menu-name: "&aDaftar Barang Aktif"
+expired-menu-name: "&cDaftar Barang Dibatalkan/Expired"
+purchase-menu-name: "§aKonfirmasi Pembelian"
+
+# Chat
+item-purchased: "§aItem Dibeli!"
+buyer-purchased: "&6%buyer% §aTelah memberli itemmu seharga &6%price%Coin &a!"
+item-listed: "&aKamu telah mendaftar &d@item &r&d(x@amount) &2seharga &d@price Coins.§a Ketik &e/ah listings &auntuk melihat semua daftar barang aktif"
+cancelled-item: "&ckamu telah membatalkan §6auction. §cjika ingin mengambil barang dibatalkan/expired ketik §6/ah expired&c."
+cancelled-purchase: "&ckamu telah membatalkan pembelian"
+admin-removed: "&cDaftar dihapus."
+purchased-item: "&aKamu telah membeli &d@item &r&d(x@amount) &aseharga &d@price"               #@player, @item, @price, @amount
+seller-message: "&e@player &aTelah membeli @item mu (x@amount) seharga &d@price Coins §a!"         #@player, @item, @price, @amount
+returned-item: "&cKamu telah membatalkan &d@item &r&d(x@amount) &2dari auction house."                     #@item, @amount
+
+# Error messages
+in-creative: "&cKamu tidak boleh menjual item jika sedang Creative."
+max-listings: "&cKamu tidak boleh menjual lebih dari 45 item"
+invalid-price: "&cHarga invalid."
+no_empty: "&cInventorymu kosong."
+not-enough-space: "§cInventorymu penuh"
+self-purchase: "&cKamu tidak bisa membeli barangmu sendiri."
+item-gone: "§cItem ini tidak ada lagi"
+no-item: "&cKamu harus memegang item"
+cannot-afford: "§cUangmu kurang untuk membeli item ini"
+item-blacklisted: "&cItem ini dilarang di Auction House"
+invalid-balance: "&cKamu tidak mempunyai uang untuk membuat auction"
+listing-gone: "&cItem ini tidak ada"
+price-range: "&cKisaran harga tidak valid"                                                                         #@min, @max
+
+# Items in the menu UI
+listed-item:
+    # %price% = Price of listing
+    # %seller% = Username of seller
+    # %time% = Time until listing expires
+    - "&7-------------------------"
+    - "&aKlik ini untuk membeli"
+    - ""
+    - "&9Harga: &e%price%"
+    - "&9Penjual: &e%seller%"
+    - "&9Expired: &e%time%"
+    - "&7-------------------------"
+your-listed-item:
+    # %price% = Price of listing
+    # %time% = Time until listing expires
+    - "&7-------------------------"
+    - "§cKlik ini untuk menjual item"
+    - ""
+    - "&9Harga: &e%price%"
+    - "&9Expired: &e%time%"
+    - "&7-------------------------"
+expired-item:
+    # %price% = Price of listing
+    - "&7-------------------------"
+    - "§aKlik ini untuk menjual itsm."
+    - ""
+    - ""
+    - "&9Harga: &e%price%"
+    - "&7-------------------------"
+view-listed-items:
+    # %selling% = Number of active listings
+    id: 264
+    name: "&6Items yang kamu jual"
+    lore:
+        - "&aKlik ini untuk melihat list item yg kamu jual"
+        - "§aKamu sedang menjual item auction."
+        - ""
+        - "&9Menjual: &e%selling%"
+view-expired-items:
+    # %expired% = Number of expired listings
+    id: 394
+    name: "&6Mengambil Item yg dibatalkan / Expired"
+    lore:
+      - "&r&aKlik ini untuk mengambil "
+      - "&aItem yg sudah dibatalkan/expired"
+      - ""
+      - "&9Item yg untuk diambil: &e%expired%"
+previous-page:
+    id: "339"
+    name: "&a<- Bagian sebelumnya"
+    lore:
+        - "Ke bagian sebelumnya"
+next-page:
+    id: "339"
+    name: "&aBagian selanjutnya ->"
+    lore:
+        - "Ke bagian selanjutnya"
+back-button:
+    id: "339"
+    name: "&6Kembali"
+    lore:
+sell-description:
+    id: "388"
+    name: "&6Cara Menjual Item"
+    lore:
+        - "&aUntuk mendaftar item pilih item yg ingin dijual dan pegang"
+        - "&aSetelah itu ketik &b/ah sell <harga>&a."
+main-description:
+    id: "340"
+    name: "&6Bagian apa ini?"
+    lore:
+        - "&aDisinilah tempat auction house, kamu bisa"
+        - "&amelihat list item yg dijualdan membeli item"
+        - "&adari orang lain."
+        - ""
+        - "&aAuction house adalah tempat"
+        - "&apaling bagus untuk menjual item"
+        - "&aplayers lain bisa saja penasaran."
+main-stats:
+    # %page% = Current page
+    # %max% = Max page
+    # %total% = Total listing count
+    id: "54"
+    name: "&cAuction House"
+    lore:
+        - "&aBagian %page%/%max%"
+        - "&7Total item &b%total%"
+        - "Klik untuk merefresh bagian"
+listings-description:
+    id: "340"
+    name: "&6Bagian apa ini?"
+    lore:
+        - "&aDisinilah tempat-tempat yg"
+        - "&aSedang kamu jual"
+        - "&aAuction house didisplay disini"
+        - ""
+        - "&aKamu bisa membatalkan itemmu dan melihat"
+        - "&awaktu expired disini."
+listings-stats:
+    # %page% = Current page
+    # %max% = Max page
+    # %total% = Total listing count
+    id: "54"
+    name: "&l&6Daftar"
+    lore:
+        - "&aBagian dari %page%/%max%"
+        - "&7Total item dari&b%total%"
+expired-description:
+    id: "340"
+    name: "&6Bagian apa ini?"
+    lore:
+        - "&aDisinilah tempat barang barang yg kamu batalkan"
+        - "&dan aexpired item, jika ada item yg dibatalkan"
+        - "&aatau expired kamu dapat mengambilnya lagi"
+        - "&adari menu."
+        - ""
+        - "&aKlik item untuk mengambil jika"
+        - "&ainventorymu tidak penuh"
+expired-stats:
+    # %page% = Current page
+    # %max% = Max page
+    # %total% = Total listing count
+    id: "152"
+    name: "&l&6Expired"
+    lore:
+        - "&aPage %page%/%max%"
+        - "&7Total dari &b%total% &7items"
+purchase-confirm:
+    name: "&aKomfirmasi pembelian"
+purchase-cancel:
+    name: "&cBatalkan pembelian"
+purchaseItem:
+    lore:
+        - ""
+        - "&9Harga: &e$%price%"
+        - "&9Penjual: &e%seller%"
+...
